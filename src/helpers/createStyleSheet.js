@@ -1,5 +1,5 @@
 // create and append style sheet
-export function createStyleSheet (media) {
+export function createStyleSheet (media, shadowContainer) {
   // Create the <style> tag
   var style = document.createElement("style");
   // style.setAttribute("type", "text/css");
@@ -13,7 +13,11 @@ export function createStyleSheet (media) {
   // style.appendChild(document.createTextNode(""));
 
   // Add the <style> element to the page
-  document.querySelector('head').appendChild(style);
+  if (shadowContainer) {
+    shadowContainer.appendChild(style)
+  }else {
+    document.querySelector('head').appendChild(style);
+  }
 
   return style.sheet ? style.sheet : style.styleSheet;
-};
+}
