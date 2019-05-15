@@ -1,5 +1,5 @@
 {
-  "name": "tiny-slider",
+  "name": "@bentoboxes/tiny-slider",
   "version": "2.9.3",
   "description": "Vanilla javascript slider for all purposes, inspired by Owl Carousel.",
   "main": "src/tiny-slider.js",
